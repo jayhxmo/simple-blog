@@ -1537,7 +1537,8 @@ a.button-play {
     margin-left: 0; }
   @media (min-width: 880px) {
     .body-blog .contents {
-      max-width: 100%; }
+      max-width: 100%;
+      padding: 0 20px; }
     .body-blog .half {
       padding: 60px;
       max-width: 100%; } }
@@ -1655,5 +1656,29 @@ a.button-play {
       font-size: 16px; }
     .person--blog .person__details h5 {
       font-size: 12px; } }
+
+/*************************************/
+/************** ARTICLE **************/
+/*************************************/
+.article-header {
+  margin: 0 0 50px 0; }
+  .article-header img {
+    margin: 0 0 0 -80px;
+    width: 100vw;
+    height: auto; }
+  .article-header h4.image-description {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.55);
+    margin: 12px 0 0 0;
+    text-align: center; }
+
+.article-content {
+  max-width: 688px;
+  margin: 0 auto; }
+  .article-content h1, .article-content h2, .article-content h3, .article-content h4, .article-content h5, .article-content h6, .article-content p {
+    max-width: 100%;
+    width: 100%; }
+  .article-content .intro {
+    margin: 0; }
 
 /*# sourceMappingURL=site.css.map */
