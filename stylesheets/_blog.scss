@@ -2,16 +2,53 @@ $color-link: #0075eb;
 $color-text: rgba(0, 0, 0, 0.7);
 $color-text--faded: rgba(0, 0, 0, 0.55);
 
+@mixin article-details() {
+	line-height: 16px;
+
+	@media (min-width: 880px) {
+		line-height: 14px;
+	}
+
+	h4 {
+		display: inline-block;
+		margin: 0 3px 0 0;
+	}
+
+	h4:nth-child(2) {
+		&:before {
+			display: inline-block;
+			content: '';
+			background: $color-text;
+			width: 2px;
+			height: 2px;
+			margin: -2px 8px 0 0;
+			border-radius: 50%;
+			vertical-align: middle;
+		}
+	}
+}
+
 .body-blog {
 	color: $color-text;
 
 	h2 {
 		max-width: 100%;
+
+		color: $color-text;
 		margin: 0 0 11px 0;
 		padding: 0;
 		font-weight: 500;
 		// font-weight: 500;
+		font-size: 27px;
 		line-height: 115%;
+		letter-spacing: 0;
+	}
+
+	h3 {
+		margin: 33px 0 8px 0;
+		font-size: 22px;
+		font-weight: 600;
+		line-height: 136%;
 		letter-spacing: 0;
 	}
 
@@ -25,16 +62,27 @@ $color-text--faded: rgba(0, 0, 0, 0.55);
 	}
 
 	h5 {
+		color: $color-text--faded;
 		font-size: 12px;
 		font-weight: 300;
 		line-height: 100%;
 	}
 
 	p.global {
+		color: $color-text;
 		max-width: 100%;
 		font-size: 18px;
 		font-weight: 300;
 		line-height: 138%;
+	}
+
+	section p,
+	li {
+		margin: 0 0 14px 0;
+		color: $color-text;
+		font-size: 19px;
+		font-weight: 400;
+		line-height: 168%;
 	}
 
 	.feature {
@@ -55,6 +103,11 @@ $color-text--faded: rgba(0, 0, 0, 0.55);
 			padding: 60px;
 			max-width: 100%;
 			// margin: 0 auto;
+		}
+
+		h2 {
+			font-size: 28px;
+			line-height: 118%;
 		}
 	}
 }
@@ -152,37 +205,13 @@ $color-text--faded: rgba(0, 0, 0, 0.55);
 		border-radius: 6px;
 	}
 
-	.article-preview__details {
-		margin: 0 0 9px 0;
-		line-height: 16px;
-	}
-
 	p.global {
 		margin: 0 0 17px 0;
 	}
 
-	h4 {
-		display: inline-block;
-		margin: 0 3px 0 0;
-	}
-
-	h4:nth-child(2) {
-		&:before {
-			display: inline-block;
-			content: '';
-			background: $color-text;
-			width: 2px;
-			height: 2px;
-			margin: -2px 8px 0 0;
-			border-radius: 50%;
-			vertical-align: middle;
-		}
-	}
-
-	@media (min-width: 880px) {
-		.article-preview__details {
-			line-height: 14px;
-		}
+	.article-preview__details {
+		margin: 0 0 9px 0;
+		@include article-details;
 	}
 }
 
@@ -242,7 +271,7 @@ $color-text--faded: rgba(0, 0, 0, 0.55);
 	margin: 0 0 50px 0;
 
 	img {
-		margin: 0 0 0 -80px;
+		margin: 0 0 0 -20px;
 		width: 100vw;
 		height: auto;
 	}
@@ -253,18 +282,115 @@ $color-text--faded: rgba(0, 0, 0, 0.55);
 		margin: 12px 0 0 0;
 		text-align: center;
 	}
+
+	@media (min-width: 880px) {
+		img {
+			margin: 0 0 0 -80px;
+		}
+	}
 }
 
-.article-content {
-	max-width: 688px;
-	margin: 0 auto;
+.body-blog {
+	.article-content,
+	section {
+		max-width: 688px;
+		margin: 0 auto 64px auto;
+		// average out until there is much more accurate way
 
-	h1, h2, h3, h4, h5, h6, p {
-		max-width: 100%;
-		width: 100%;
+		h1,
+		h2,
+		h3,
+		h5,
+		h6,
+		p {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		.intro {
+			margin: 0 0 16px 0;
+			padding: 0;
+		}
+
+		.brief {
+			margin: 0 0 17px 0;
+		}
 	}
 
-	.intro {
-		margin: 0;
+	.quote {
+		position: relative;
+		margin: 30px 0 32px -20px;
+		padding: 10px 30px 7px 30px;
+
+		p {
+			margin: 0;
+			padding: 0;
+			color: $color-text--faded;
+			font-size: 24px;
+			line-height: 133%;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 8px;
+			height: 100%;
+			background: #d6dfe9;
+			border-radius: 0 2px 2px 0;
+		}
+
+		@media (min-width: 728px) {
+			// 688 + 20 + 20
+			margin: 30px 0 32px 0;
+
+			&:before {
+				border-radius: 2px;
+			}
+		}
+	}
+
+	.separators {
+		position: relative;
+		margin: 54px auto 59px auto;
+	}
+
+	.separators,
+	.separators:before,
+	.separators:after {
+		width: 6px;
+		height: 6px;
+		background: $color-text;
+		border-radius: 50%;
+	}
+
+	.separators:before {
+		content: '';
+		position: absolute;
+		left: -32px;
+	}
+
+	.separators:after {
+		content: '';
+		position: absolute;
+		left: 32px;
+	}
+
+	ol {
+		padding-left: 30px;
+	}
+
+	.article-content {
+		margin-bottom: 59px;
+
+		.article-content__details {
+			margin: 0 0 16px 0;
+			@include article-details;
+
+			@media (min-width: 880px) {
+				margin: 0 0 14px 0;
+			}
+		}
 	}
 }
