@@ -1,49 +1,21 @@
-// @font-face {
-//     font-family: Metropolis;
-//     src: url(fonts/Metropolis-Thin.otf);
-//     font-weight: 200;
-// }
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 @font-face {
     font-family: Metropolis;
-    src: url(fonts/Metropolis-Light.otf);
-    // font-weight: 200;
+    src: url(fonts/Metropolis-Regular.otf);
     font-weight: 300;
 }
 
 @font-face {
     font-family: Metropolis;
-    src: url(fonts/Metropolis-Regular.otf);
-    font-weight: 400;
-    // font-weight: 300;
-}
-
-@font-face {
-    font-family: Metropolis;
-    src: url(fonts/Metropolis-RegularItalic.otf);
-    font-weight: 400;
-    // font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: Metropolis;
     src: url(fonts/Metropolis-Medium.otf);
-    font-weight: 500;
-    // font-weight: 400;
+    font-weight: 400;
 }
 
+// For Blog
 @font-face {
     font-family: Metropolis;
     src: url(fonts/Metropolis-SemiBold.otf);
-    // font-weight: 500;
-    font-weight: 600;
+    font-weight: 500;
 }
-
 
 body {
     font-size: 16px;
@@ -144,7 +116,7 @@ h2 {
 
 h3 {
     font-size: 16px;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.3em;
     font-weight: 500;
     margin-top: 2em;
     letter-spacing: 0;
@@ -206,9 +178,6 @@ p {
 }
 
 .feature {
-    height: 200px;
-    background: #F0F2F5 url(images/screenshot-mobile.jpg) 50% 0 no-repeat;
-    background-size: cover;
 }
 
 .feature video,
@@ -281,7 +250,8 @@ nav span {
     padding: 10px 10px 10px 0;
     height: 30px;
     text-align: center;
-    font-weight: 500;
+    // font-weight: 500;
+    font-weight: 400; // Should be 400 - Jay
     font-size: 110%;
 }
 
@@ -367,10 +337,6 @@ nav .nav-links {
     padding-left: 0;
 }
 
-.people span {
-    font-weight: 200;
-}
-
 .people li {
     font-size: 14px;
     line-height: 1.4;
@@ -411,11 +377,11 @@ nav .nav-links {
 }
 
 .small {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 footer {
-    padding: 20px 0 40px 0;
+    padding: 100px 0 40px 0;
     margin-top: 20px;
     line-height: 2;
 }
@@ -440,17 +406,17 @@ footer span {
 }
 
 .videoWrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
 }
 .videoWrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .howitworks {
@@ -524,11 +490,17 @@ a.button-play {
     padding: 6px 0; 
     height: auto;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 18px;
     letter-spacing: 0;
     text-transform: none;
     background: #fff;
-    margin: 8px 0 0 0;
+    margin: 8px 0 8px 0;
+    
+    &.button-appstore {
+        background: #000;
+        color: #fff;
+        border-color: #000;
+    }
 }
 
 .mobile-screen-wrapper,
@@ -597,21 +569,49 @@ a.button-play {
 }
 
 .videowrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
 }
 .videowrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* For small screens */
 @media (max-width: 880px) {
+    h3, h5 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 20px;
+    }
+    
+    footer {
+        border-top: 1px solid #ddd;
+        margin-top: 100px;
+    }
+    
+    footer a,
+    footer span {
+        font-size: 16px;
+    }
+    
+    a.button-play {
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+        img {
+            width: 32px;
+            height: 32px;
+            margin-right: 14px;
+        }
+    }
     .barebones-wrapper h3 {
         text-align: center;
         font-size: 140%;
@@ -641,6 +641,12 @@ a.button-play {
     .dashboard-screen-wrapper img {
         width: 100%;
     }
+    
+    .feature {
+        height: 20px;
+        background: #0A2E52;
+    }
+    
     .feature a {
         display: none;
     }
@@ -648,6 +654,10 @@ a.button-play {
 
 /* For large screens */
 @media (min-width: 880px) {
+    .mobile {
+        display: none;
+    }
+    
     body {
         font-size: 18px;
     }
@@ -669,7 +679,7 @@ a.button-play {
         text-transform: uppercase;
         margin-bottom: 1em;
         letter-spacing: 0.05em;
-        font-weight: 300;
+        font-weight: 500;
     }
     
     a.button {
@@ -679,6 +689,13 @@ a.button-play {
     a.button-play {
         padding: 6px 40px;
         min-width: 2em;
+        
+        img {
+            height: 20px;
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
     }
     
     .image-float {
@@ -702,12 +719,13 @@ a.button-play {
     }
     
     .feature {
+        background: #F0F2F5 url(/images/screenshot-mobile.jpg) 50% 0 no-repeat;
         position: fixed;
         top: 0;
         left: 0;
         width: 45%;
         height: 100%;
-        background-image: url(images/screenshots.png);
+        background-image: url(/images/screenshots.png);
         background-size: contain;
         background-position: 50% 50%;
     }
@@ -721,20 +739,20 @@ a.button-play {
     }
     
     .feature.about {
-        background-image: url(../images/screenshots-progress.png);
+        background-image: url(/images/screenshots-progress.png);
     }
 
     .feature.getinvolved {
-        background-image: url(../images/screenshots-bp.png);
+        background-image: url(/images/screenshots-bp.png);
     }
     
     .feature.license {
-        background-image: url(images/screenshots-bp.png);
+        background-image: url(/images/screenshots-bp.png);
     }
     
-    //.feature.dr-tom-frieden {
-    //    background-image: url(/images/dr-tom-frieden.jpg);
-    //}
+    .feature.bp-passport {
+        background-image: url(/images/screenshots-bp-passport.png);
+    }
 
     nav {
         padding-top: 80px;

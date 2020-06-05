@@ -79,7 +79,7 @@
           </span>
         </nav>
         <div>
-          <div class="article-header">
+          <div class="article-cover">
             <img
               src="images/blog/article-header.png"
               alt="A doctor using Simple in a primary health center in Maharashtra, India in 2019"
@@ -88,14 +88,14 @@
               A doctor using Simple in a primary health center in Maharashtra, India in 2019
             </h4>
           </div>
-          <div class="article-content">
-            <div class="article-content__details">
+          <div class="article-header">
+            <div class="article-header__details">
               <h4>Feb 25, 2020</h4>
               <h4>2 min read</h4>
             </div>
-            <p class="intro">
+            <h1 class="intro">
               What we are learning by creating an ultra-thin EMR
-            </p>
+            </h1>
             <p class="brief global">
               Only 17 months ago, our team wrote the first line of code for the Simple app. Today, clinicians
               manage over 125,000 patients with hypertension. <br />What got us there?
@@ -108,99 +108,142 @@
               </div>
             </div>
           </div>
-          <section>
-            <h2>The challenge</h2>
-            <p>
-              It might surprise you that high blood pressure (hypertension) is one of the most common causes
-              of death in the world. High blood pressure leads to heart disease and strokes, and it kills more
-              people than all infectious diseases combined. In many countries, like the US or India, about
-              1-in-4 adults has high BP, which translates into hundreds of millions of people who are at risk.
-            </p>
-            <div class="two-column"></div>
-            <p>
-              Measuring outcomes is really difficult in places where doctors and nurses are already
-              overworked. In countries like India and Bangladesh, a doctor or nurse frequently sees more than
-              100 patients in a single day. A typical clinic visit in the US is about 15 minutes but in India
-              an average encounter is less than 5 minutes. In the US, clinicians feel burdened by data entry
-              tasks — given the choice, they would maximize their time talking directly to patients, without
-              their eyes glued to a computer screen. So, it’s unsurprising that busy clinicians in India are
-              even less inclined to record data about patients.
-            </p>
-            <div class="quote">
+          <div class="article-content">
+            <section>
+              <!-- <h2>The challenge</h2> -->
+              <h2>Where is Simple?</h2>
               <p>
-                When we ask health care workers in India what they would like to see in new software, they
-                consistently tell us: "Just please don’t make my work harder."
+                It might surprise you that high blood pressure (hypertension) is one of the most common causes
+                of death in the world. High blood pressure leads to heart disease and strokes, and it kills
+                more people than all infectious diseases combined. In many countries, like the US or India,
+                about 1-in-4 adults has high BP, which translates into hundreds of millions of people who are
+                at risk.
               </p>
+              <div class="two-column"></div>
+              <p>
+                Measuring outcomes is really difficult in places where doctors and nurses are already
+                overworked. In countries like India and Bangladesh, a doctor or nurse frequently sees more
+                than 100 patients in a single day. A typical clinic visit in the US is about 15 minutes but in
+                India an average encounter is less than 5 minutes. In the US, clinicians feel burdened by data
+                entry tasks — given the choice, they would maximize their time talking directly to patients,
+                without their eyes glued to a computer screen. So, it’s unsurprising that busy clinicians in
+                India are even less inclined to record data about patients.
+              </p>
+              <div class="quote">
+                <p>
+                  When we ask health care workers in India what they would like to see in new software, they
+                  consistently tell us: "Just please don’t make my work harder."
+                </p>
+              </div>
+              <p>
+                In many places with high volume patient care there is minimal longitudinal data about
+                patients. Each patient who comes into the facility is treated like a new patient, even if
+                they’ve been there a hundred times before. That makes it difficult to improve the clinical
+                outcomes for patients and improve the quality of the overall system. If you don’t know what a
+                patient’s previous BP was, how do you know if they’re improving? If you don’t know the
+                percentage trend of patients with controlled BP, how do you know if your system is improving?
+              </p>
+            </section>
+            <section>
+              <h2>Ask for the bare minimum</h2>
+              <p>
+                Many medical record systems are designed by administrators or by public health officials.
+                They're often disconnected from the day-to-day work of busy healthcare workers, so it seems
+                like no big deal to add 'interesting' or 'useful' data entry fields. As we’ve seen with
+                complex systems, if you ask for too much data, either clinicians don’t use the software at all
+                or they enter low quality data: "garbage-in garbage-out."
+              </p>
+            </section>
+            <section>
+              <h2>What we learned about this process</h2>
+              <h3>Lesson 1: Just the right amount of fidelity</h3>
+              <p>
+                Using paper prototypes helped us to focus the users’ attention on the parts that really
+                mattered — the content, not the design. The low fidelity prototypes also set the bar low, so
+                nurses felt comfortable criticising the ideas and also gave them confidence to present their
+                own ideas even if they couldn’t draw well.
+              </p>
+              <h3>Lesson 2: Choices are empowering</h3>
+              <p>
+                Nurses and doctors felt involved in the decision making process behind an app that they use
+                every day. They expressed that they felt safe and motivated to express their thoughts. Also,
+                because they could choose from many ideas, there was no pressure to be right or wrong.
+              </p>
+              <h3>Lesson 3: Get your users to be creative</h3>
+              <p>
+                When your users are busy with daily responsibilities and repetitive tasks, it is hard to
+                suddenly switch context and start thinking creatively. This paper-based activity lowered the
+                bar and allowed nurses and doctors to imagine scenarios “out of the device.” Pen and paper,
+                and the inspiration of seeing our ideas in front of them, effectively shifted their mindset to
+                creatively suggest ways our software could make their work life better.
+              </p>
+              <ol>
+                <li>
+                  The user would have to download the entire dataset, a large part of which was irrelevant to
+                  the user. It is uncommon that a patient visits facilities in two different districts.
+                </li>
+                <li>
+                  Syncing from the earliest record first would result in users waiting for an unknown amount
+                  of time to get all the patients in their facility.
+                </li>
+              </ol>
+            </section>
+            <div class="separators"></div>
+            <section>
+              <h3>
+                Thanks
+              </h3>
+              <p>
+                This article is co-written with <a href="#">Tanushree Jindal</a>, without whose valuable input
+                creating the storyboard would not have been possible. Thanks to
+                <a href="#">Daniel Burka</a> for his help in writing and editing, which helped us strengthen
+                the article.
+              </p>
+              <p>
+                Special thanks to <a href="#">Dr. Terry Cullen</a> and <a href="#">Dr. Greg Schmidt</a> for
+                reviewing and editing the article, and to <a href="#">Anand Ramakrishnan</a> for the
+                photography.
+              </p>
+            </section>
+          </div>
+          <div class="article-end">
+            <div class="article-end__written-by">
+              <h4 class="article-end__subtitle">Written by</h4>
+              <div class="person--blog">
+                <img src="images/people/daniel-burka.jpg" alt="Daniel Burka" class="person__photo" />
+                <div class="person__details">
+                  <h3><a href="article.html">Daniel Burka</a></h3>
+                  <h5>Product and design, Canada</h5>
+                </div>
+              </div>
             </div>
-            <p>
-              In many places with high volume patient care there is minimal longitudinal data about patients.
-              Each patient who comes into the facility is treated like a new patient, even if they’ve been
-              there a hundred times before. That makes it difficult to improve the clinical outcomes for
-              patients and improve the quality of the overall system. If you don’t know what a patient’s
-              previous BP was, how do you know if they’re improving? If you don’t know the percentage trend of
-              patients with controlled BP, how do you know if your system is improving?
-            </p>
-          </section>
-          <section>
-            <h2>Ask for the bare minimum</h2>
-            <p>
-              Many medical record systems are designed by administrators or by public health officials.
-              They're often disconnected from the day-to-day work of busy healthcare workers, so it seems like
-              no big deal to add 'interesting' or 'useful' data entry fields. As we’ve seen with complex
-              systems, if you ask for too much data, either clinicians don’t use the software at all or they
-              enter low quality data: "garbage-in garbage-out."
-            </p>
-          </section>
-          <section>
-            <h2>What we learned about this process</h2>
-            <h3>Lesson 1: Just the right amount of fidelity</h3>
-            <p>
-              Using paper prototypes helped us to focus the users’ attention on the parts that really mattered
-              — the content, not the design. The low fidelity prototypes also set the bar low, so nurses felt
-              comfortable criticising the ideas and also gave them confidence to present their own ideas even
-              if they couldn’t draw well.
-            </p>
-            <h3>Lesson 2: Choices are empowering</h3>
-            <p>
-              Nurses and doctors felt involved in the decision making process behind an app that they use
-              every day. They expressed that they felt safe and motivated to express their thoughts. Also,
-              because they could choose from many ideas, there was no pressure to be right or wrong.
-            </p>
-            <h3>Lesson 3: Get your users to be creative</h3>
-            <p>
-              When your users are busy with daily responsibilities and repetitive tasks, it is hard to
-              suddenly switch context and start thinking creatively. This paper-based activity lowered the bar
-              and allowed nurses and doctors to imagine scenarios “out of the device.” Pen and paper, and the
-              inspiration of seeing our ideas in front of them, effectively shifted their mindset to
-              creatively suggest ways our software could make their work life better.
-            </p>
-            <ol>
-              <li>
-                The user would have to download the entire dataset, a large part of which was irrelevant to
-                the user. It is uncommon that a patient visits facilities in two different districts.
-              </li>
-              <li>
-                Syncing from the earliest record first would result in users waiting for an unknown amount of
-                time to get all the patients in their facility.
-              </li>
-            </ol>
-          </section>
-          <div class="separators"></div>
-          <section>
-            <h3>
-              Thanks
-            </h3>
-            <p>
-              This article is co-written with <a href="#">Tanushree Jindal</a>, without whose valuable input
-              creating the storyboard would not have been possible. Thanks to <a href="#">Daniel Burka</a> for
-              his help in writing and editing, which helped us strengthen the article.
-            </p>
-            <p>
-              Special thanks to <a href="#">Dr. Terry Cullen</a> and <a href="#">Dr. Greg Schmidt</a> for
-              reviewing and editing the article, and to <a href="#">Anand Ramakrishnan</a> for the
-              photography.
-            </p>
-          </section>
+            <div class="article-end__share">
+              <h4 class="article-end__subtitle">Share on</h4>
+              <div class="article-end__share__actions">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="article-end__share__button article-end__share__button--facebook"
+                >
+                  <img src="images/icons/logo-facebook.svg" alt="Facebook Logo" />Share
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="article-end__share__button article-end__share__button--twitter"
+                >
+                  <img src="images/icons/logo-twitter.svg" alt="Twitter Logo" />Tweet
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  class="article-end__share__button article-end__share__button--linkedin"
+                >
+                  <img src="images/icons/logo-linkedin.svg" alt="LinkedIn Logo" />Share
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="articles--normal">
           <div class="article-preview">
