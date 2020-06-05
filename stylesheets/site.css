@@ -1848,6 +1848,38 @@ a.button-play {
   .body-blog .article-header .brief,
   .body-blog section .brief {
     margin: 0 0 17px 0; }
+.body-blog .article-content .image {
+  width: 50%;
+  margin: 30px 0 25px 0; }
+  .body-blog .article-content .image img {
+    width: calc(100vw - 40px);
+    max-width: 688px;
+    margin: 0; }
+  .body-blog .article-content .image h4 {
+    width: calc(100vw - 40px);
+    max-width: 688px;
+    color: rgba(0, 0, 0, 0.55);
+    font-weight: 300;
+    margin: 12px 0 0 0;
+    text-align: center;
+    line-height: 142%; }
+    .body-blog .article-content .image h4 a {
+      color: rgba(0, 0, 0, 0.55);
+      text-decoration: underline; }
+      .body-blog .article-content .image h4 a:hover {
+        color: #000; }
+@media (min-width: 880px) {
+  .body-blog .article-content .image--left {
+    margin: 30px 40px 25px 0;
+    float: left; }
+    .body-blog .article-content .image--left div {
+      float: right; } }
+@media (min-width: 880px) {
+  .body-blog .article-content .image--right {
+    margin: 30px 0 25px 40px;
+    float: right; }
+    .body-blog .article-content .image--right div {
+      float: left; } }
 .body-blog .article-content .quote {
   position: relative;
   margin: 30px 0 32px -20px;
